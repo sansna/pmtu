@@ -6,6 +6,12 @@ calls to `ping` to perform binary search.
 Sometimes the network is unusable without manually decreasing the MTU on the
 interface. This script should tell you what the appropriate value is.
 
+tl;dr
+=
+Uses linux's ping/ping6 cmdline tool with option -s (payload).
+Usable payload is added 28/48 bytes to get the PMTU.
+In ipv4, 28 = 20(ip header)+8(icmp header).
+
 ### Example
 
 ```
